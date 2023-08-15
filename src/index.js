@@ -13,7 +13,11 @@ app.use(cors({
 }));
 
 app.get('/filme', (req, res) => {
-    res.contentType('text/html').sendFile(__dirname + "/index.html")
+    res.contentType('text/html').sendFile(__dirname + "/public/index.html")
+});
+
+app.get('/filme/show', (req, res) => {
+    res.contentType('text/html').sendFile(__dirname + "/public/show.html")
 });
 
 app.use(Routes)
