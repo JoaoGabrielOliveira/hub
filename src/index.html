@@ -1,0 +1,50 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
+  </head>
+  
+  <body>
+    <!--
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      preload="auto"
+      width="640"
+      height="264"
+      poster="https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/07/Fotografia-e-a-sua-importancia-para-a-sociedade.jpg"
+      data-setup="{}"
+    >
+    <source
+    src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"
+    type="application/x-mpegURL">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank"
+          >supports HTML5 video</a
+        >
+      </p>
+    </video>
+-->
+<video id="video" controls></video>
+<script>
+    var video = document.getElementById('video');
+    var videoSrc = 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8';
+    if (Hls.isSupported()) {
+        alert("carrega no celular")
+        var hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            video.play();
+        })
+    }
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        alert("Não carrega no celular")
+        video.src = videoSrc;
+        video.addEventListener('loadedmetadata', () => {
+            video.play();
+        })
+    }
+  </script>
+  </body>

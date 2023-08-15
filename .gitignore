@@ -1,0 +1,5 @@
+node_modules/
+video_base/
+*-lock.json
+*.mkv
+*.mp4
