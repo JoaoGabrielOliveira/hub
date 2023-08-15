@@ -10,8 +10,6 @@ export default class ShowController {
     }
 
     index(req, res){
-        console.log("\n\n",this.showService, "\n\m");
-
         return res.send(this.showService.getAllShow());
     }
 
@@ -20,7 +18,10 @@ export default class ShowController {
         if(!showFind)
             return res.status(HttpHelper.NOT_FOULD).send({});
             
-        res.send(this.videoService.getVideosAndGiveTitle(showFind.pathFolder, "S3E{e}"))
+        res.send(this.videoService.getVideosAndGiveTitle(showFind.pathFolder, "S3E{e}")
+            .map(video => {
+                return {...video, link: `http://192.168.0.108/film/${showFind.id}/${video.title}`}
+            }));
     }
 
     getVideos(req, res){
