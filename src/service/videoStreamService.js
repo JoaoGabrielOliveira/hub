@@ -31,6 +31,7 @@ export default function getVideoStream(filePath, range, response){
         fs.createReadStream(filePath).pipe(response)
     }
 
+    return response;
 }
 
 function getStartAndEndOfRange(range, size) {
