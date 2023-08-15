@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2023-08-12T06:21:58.801Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0" etag="wS50ir_CeYAhQqRC8hfX" version="21.6.8" type="device">
+  <diagram name="Página-1" id="pKfRNvnqJK8yJ93c1BkJ">
+    <mxGraphModel dx="574" dy="302" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-2" target="a6ipIlGrtBDVfaTOucu1-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-2" target="a6ipIlGrtBDVfaTOucu1-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-2" value="Abre o aplicativo" style="rounded=1;whiteSpace=wrap;html=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="30" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-3" target="a6ipIlGrtBDVfaTOucu1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-3" value="Clica em baixar torrent" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="230" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-5" target="a6ipIlGrtBDVfaTOucu1-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-5" value="Você passa o link magnético e baixa no servidor" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="430" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-7" target="a6ipIlGrtBDVfaTOucu1-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-7" value="&lt;div&gt;O arquivo é salvo no servidor&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="430" y="440" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-9" target="a6ipIlGrtBDVfaTOucu1-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-9" value="Um gerenciador de arquivos mostra os vídeos disponíveis" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="220" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-11" target="a6ipIlGrtBDVfaTOucu1-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-11" value="Você clica no filme baixado" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-13" target="a6ipIlGrtBDVfaTOucu1-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a6ipIlGrtBDVfaTOucu1-13" target="a6ipIlGrtBDVfaTOucu1-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-13" value="Um player carrega o filme e é transmitido via stremming" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-15" value="Quando o filme acaba, o player fecha e volta para o menu principal" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="220" y="580" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-22" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Site na &lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a6ipIlGrtBDVfaTOucu1-24" value="&lt;div style=&quot;font-size: 6px;&quot;&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;Botão para alterar idioma&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;&lt;a href=&quot;https://github.com/videojs/http-streaming&quot;&gt;Solução&lt;/a&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="660" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
