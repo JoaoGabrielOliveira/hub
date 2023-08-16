@@ -22,12 +22,12 @@ function addToListOfWorkers(message:WorkerMessage){
 function whenWorkerIsOnline(worker : Worker) {
     let message = new WorkerMessage(worker.id, 'new', worker)
     logInfo(`Worker ${message.id} is online`, message.status);
-    this.worker.send(message)
+    worker.send(message)
 }
 
 //#region Cluster Event
 cluster.setupPrimary({
-    exec: __dirname + "/index.ts"
+    exec: __dirname + "/../../index.ts"
 });
 
 cluster.on("message", (message: WorkerMessage) => {
@@ -35,3 +35,5 @@ cluster.on("message", (message: WorkerMessage) => {
     addToListOfWorkers(message);
 });
 //#endregion
+
+startWorkers(1)
