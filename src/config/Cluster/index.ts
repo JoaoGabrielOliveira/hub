@@ -36,4 +36,4 @@ cluster.on("message", (message: WorkerMessage) => {
 });
 //#endregion
 
-startWorkers(1)
+startWorkers(5)
