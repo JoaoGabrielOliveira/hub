@@ -1,8 +1,6 @@
-import express, { Request, Response } from 'express';
+import Environment from './config/Enviroment';
+import ExpressServer from './Server';
 
-const APP = express()
 
-
-APP.listen(80, () => {
-    console.log("Hello World")
-});
+ExpressServer.listen(parseInt(Environment.PORT), Environment.HOST,
+() => console.log(`Server running on http://${Environment.HOST}:${Environment.PORT}`) )
