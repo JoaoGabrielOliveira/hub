@@ -3,3 +3,4 @@ video_base/
 *-lock.json
 *.mkv
 *.mp4
+.sqlite

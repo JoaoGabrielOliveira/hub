@@ -7,7 +7,7 @@ interface Service<T extends BaseEntity> {
 
 export abstract class BaseService<T extends BaseEntity> implements Service<T> {
     public repository : Repository<T>;
-    private nameTable : string;
+    protected nameTable : string;
 
     get name(){
         (!this.nameTable)
