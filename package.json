@@ -1,16 +1,15 @@
 {
-  "name": "stremming",
+  "name": "biscreaming",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A local host screaming service to serve your videos",
+  "type": "commonjs",
+  "author": "João Gabriel",
+  "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js",
+    "start": "nodemon src/index.ts",
+    "build": "ts-node src/index.ts",
     "cors": "^2.8.5"
   },
-  "type": "module",
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "cors": "^2.8.5",
@@ -18,7 +17,11 @@
     "fluent-ffmpeg": "^2.1.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.0",
     "eslint": "^8.47.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   }
 }
