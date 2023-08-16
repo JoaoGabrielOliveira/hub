@@ -8,6 +8,7 @@
   "scripts": {
     "start": "nodemon src/index.ts",
     "build": "ts-node src/index.ts",
+    "cluster": "ts-node src/cofing/Cluster/index.ts",
     "cors": "^2.8.5"
   },
   "dependencies": {
