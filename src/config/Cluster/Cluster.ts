@@ -2,7 +2,7 @@ import cluster, { Worker } from "cluster";
 import { logInfo } from "../../util/Events";
 import WorkerMessage from "./WorkerMessage";
 
-let workers = new Array<WorkerMessage>();
+let workersList = new Array<WorkerMessage>();
 
 export function addWorker(){
     let worker = cluster.fork();
@@ -15,7 +15,7 @@ export function startWorkers(numberOfWorkers : number){
 }
 
 function addToListOfWorkers(message:WorkerMessage){
-    workers.push(message);
+    workersList.push(message);
     logInfo("Worker was added with sucess!", message);
 }
 
@@ -31,8 +31,7 @@ cluster.setupPrimary({
 });
 
 cluster.on("message", (message: WorkerMessage) => {
+    logInfo(`Cluster receive a message:`, message);
     addToListOfWorkers(message);
 });
 //#endregion
-
-startWorkers(10);
