@@ -1,5 +1,5 @@
 import Environment from './config/Enviroment';
-import ExpressServer from './Server';
+import ExpressServer from './config/Server';
 import { logInfo } from './util/Events';
 
 
