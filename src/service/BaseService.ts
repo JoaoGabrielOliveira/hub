@@ -1,4 +1,4 @@
-import { BaseEntity, FindManyOptions, FindOneOptions, Repository } from "typeorm";
+import { BaseEntity, FindManyOptions, FindOneOptions, FindOptionsWhere, Repository } from "typeorm";
 import SendEvent from "../util/Events";
 
 interface Service<T extends BaseEntity> {
@@ -47,7 +47,7 @@ export abstract class BaseService<T extends BaseEntity> implements Service<T> {
         return models;
     }
 
-    async findBy(params : {}){
+    async findBy(params : FindOptionsWhere<T> | FindOptionsWhere<T>[]){
         SendEvent(`Starting search by params for ${this.name} in database!`, params, 'info');
 
         const models = this.repository.findBy(params);
