@@ -10,8 +10,6 @@ export abstract class BaseService<T extends BaseEntity> implements Service<T> {
     protected nameTable : string;
 
     get name(){
-        (!this.nameTable)
-            this.nameTable = "Users";
         return this.nameTable;
     }
 
@@ -81,6 +79,51 @@ export abstract class BaseService<T extends BaseEntity> implements Service<T> {
 
     async findById(id:any) {
         return this.findOneBy({id: id});
+    }
+
+    async save(model : T){
+        SendEvent(`Starting saving a new item of ${this.name} in database!`, model);
+
+        let promiseResult = this.repository.save(model).then(this.checkIfModelHasId).catch((error) => {
+            SendEvent(`Has no ${this.name}`, error, 'error');
+        });
+
+        return promiseResult;
+    }
+
+    async saveAll(models : T[]){
+        SendEvent(`Starting saving a new item of ${this.name} in database!`, models);
+
+        let promiseResult = this.repository.save(models)
+        .then((result) => result.forEach(this.checkIfModelHasId))
+        .catch((error) => {
+            SendEvent(`Has no ${this.name}`, error, 'error');
+        });
+
+        return promiseResult;
+    }
+
+    async saveEach(models : T[]) {
+        const   arrayLength = models.length,
+                lastIndex = arrayLength - 1;
+
+        const promise = new Promise<void>((resolve => {    
+            for(let index = 0; index < arrayLength; index++){
+                models[index].save({transaction:true})
+                if(index == lastIndex)
+                    resolve();
+            }
+        }));
+
+        return promise;
+    }
+
+
+    private checkIfModelHasId(model : T){
+        if(model.hasId())
+            SendEvent(`One item of ${this.name} was saved in database with successfully!`, model);
+        else
+            SendEvent(`Item has no ID. Check table ${this.name} is the model exist!`, model, 'warn');
     }
 
 }
