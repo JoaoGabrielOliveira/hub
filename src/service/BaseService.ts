@@ -95,7 +95,7 @@ export abstract class BaseService<T extends BaseEntity> implements Service<T> {
         SendEvent(`Starting saving a new item of ${this.name} in database!`, models);
 
         let promiseResult = this.repository.save(models)
-        .then((result) => result.forEach(this.checkIfModelHasId))
+        .then((result) => result.forEach((eachResult) => this.checkIfModelHasId(eachResult)))
         .catch((error) => {
             SendEvent(`Has no ${this.name}`, error, 'error');
         });
