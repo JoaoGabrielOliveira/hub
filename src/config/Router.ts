@@ -4,7 +4,8 @@ import ShowController from "../controller/ShowController";
 
 const Routes = Router({});
 
-Routes.get("/", FilmController.index);
+Routes.get("/film/:idShow/:videoTitle", FilmController.getIfVideoExist);
+Routes.get("/film/:idShow/:videoTitle/video", FilmController.getVideo);
 Routes.get("/show", ShowController.index);
 Routes.get("/show/:id", ShowController.get);
 Routes.get("/show/:id/videos", ShowController.getVideos);
