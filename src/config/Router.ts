@@ -12,8 +12,7 @@ Routes.get("/show", ShowController.index);
 Routes.get("/show/:id", ShowController.get);
 Routes.get("/show/:id/videos", ShowController.getVideos);
 Routes.get("/show/:id/videos/folder", ShowController.getVideosInFolder);
-Routes.post("/show/:id/videos", ShowController.postVideos);
-Routes.post("/show/:id/videos", ShowController.postVideos);
+Routes.post("/show/:id/videos/folder", ShowController.postVideos);
 
 
 Routes.get("/", (req, res) => res.sendFile(path.resolve("src/public/index.html")));
