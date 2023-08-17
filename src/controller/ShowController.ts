@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import ShowService from "../service/ShowService";
 import VideoService from "../service/VideoService";
+import HttpHelper from "../helper/HttpHelper";
 
 export default class ShowController {
 
@@ -13,6 +14,25 @@ export default class ShowController {
     }
 
     static async getVideos(req: Request, res: Response){
-        return res.send(await VideoService.getInstance().findBy({idShow: parseInt(req.params.id)}));
+        const videos = await VideoService.getInstance().findBy({idShow: parseInt(req.params.id)})
+        return res.send((videos).map(video => { return {...video, link: `http://${req.hostname}/film/${video.idShow}/${video.title}`}}));
+    }
+
+    static async getVideosInFolder(req: Request, res: Response){
+        const show = await ShowService.getInstance().findById(req.params.id);
+            
+        if(!show)
+            return res.status(HttpHelper.NOT_FOUND).send({})
+
+        return res.send(VideoService.getInstance().findAllVideoInFolderShow(show, "S3E{e}"));
+    }
+
+    static async postVideos(req: Request, res: Response){
+        const show = await ShowService.getInstance().findById(req.params.id);
+            
+        if(!show)
+            return res.status(HttpHelper.NOT_FOUND).send({})
+
+        return res.send(VideoService.getInstance().createVideosByShow(show, "S3E{e}"));
     }
 }
