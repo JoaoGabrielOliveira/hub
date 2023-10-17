@@ -9,7 +9,8 @@
     "start": "nodemon src/index.ts",
     "build": "ts-node src/index.ts",
     "cluster": "ts-node src/config/Cluster/",
-    "convert": "ts-node src/script/ConvertScript.ts"
+    "convert": "ts-node src/script/ConvertScript.ts",
+    "add:show": "ts-node src/script/AddShow.ts"
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
